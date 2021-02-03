@@ -1,0 +1,40 @@
+﻿@using ASSIGNMENT3.Models
+@model List<Post>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+    <a class="btn btn-warning pt-1" asp-action="CreatePost">Create Post</a><br /><br />
+    @foreach (Post post in Model)
+    {
+        <div class="container p-5 mt-5 bg-danger text-light" style="border-radius: 20px; width: 60%;">
+            <div>
+                <h4>@post.Username</h4>
+            </div>
+            <hr />
+            <div>
+                <a class="btn btn-danger pt-1" asp-action="PostDetails" asp-route-id="@post.PostID"><h3>@post.Title</h3></a>
+                <h6 class="align-content-xl-end">@post.CurrentDateTime.ToLongDateString()   @post.CurrentDateTime.ToLongTimeString()</h6>
+            </div>
+            <div style="border:2px solid white; border-radius: 10px; padding:10px">
+                <p>
+                    @post.Content
+                </p>
+            </div>
+        </div>
+    }
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

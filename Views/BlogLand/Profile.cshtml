@@ -1,0 +1,42 @@
+﻿@using ASSIGNMENT3.Models
+@model User
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+
+    <div class="container p-5 mt-5 bg-danger text-light" style="border-radius: 20px; width: 60%;">
+        <div>
+            <h4><b>Username:</b> <i>@Model.Username</i> </h4>
+            <a class="btn btn-warning" asp-action="ChangeUsername" asp-route-id=@Model.UserID>Update</a>
+        </div>
+        <hr />
+        <br />
+        <div>
+            <h4><b>Email:</b> <i>@Model.Email</i></h4>
+            <a class="btn btn-warning" asp-action="ChangeEmail" asp-route-id=@Model.UserID>Update</a>
+        </div>
+        <hr />
+        <br />
+        <div>
+            <h4><b>Password:</b> <i>@Model.Password</i></h4>
+            <a class="btn btn-warning" asp-action="ChangePassword" asp-route-id=@Model.UserID>Update</a>
+        </div>
+        <hr />
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

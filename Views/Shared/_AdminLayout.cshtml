@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <title>@ViewData["Title"] - BlogLand</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/site.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+            alert("Logout Successful");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-danger navbar-expand-lg fixed-top" style="font-size: large; position:fixed;">
+            <div class="container-fluid">
+                <div class="navbar-header text-white">
+                    <h4 class="navbar-brand" href="#">BlogLand</h4>
+                </div>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class=" text-white ml-4" asp-action="AdminHome"><span class="glyphicon glyphicon"></span>Home</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class=" text-white" onclick="noBack()" asp-action="AdminLogout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+
+
+
+
+    <div>
+        <main role="main" class="pb-1">
+            <br />
+            <br />
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="border-top footer text-muted" style="bottom:0px; height:50px">
+        <div class="container">
+             &copy; 2021 -  By BlogLand
+        </div>
+    </footer>
+</body>
+</html>

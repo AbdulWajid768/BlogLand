@@ -1,0 +1,42 @@
+﻿@using ASSIGNMENT3.Models
+@model Post
+@{
+    ViewData["Title"] = "Create Post";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+
+    <form  method="post" action="/BlogLand/CreatePost" class="container p-5 mt-5 bg-danger text-light" style="border-radius: 20px; width: 60%;">
+        <div class="container mt-2 p-5 text-center" style="width:60%">
+            <div class="align-items-center">
+                <label class="form-label" asp-for="Title"></label><br>
+                <input class="form-control" asp-for="Title">
+                <span asp-validation-for="Title"></span>
+            </div>
+            <br />
+            <div>
+                <label class="form-label" asp-for="Content"></label><br>
+                <textarea class="form-control" asp-for="Content" style="height:150px"></textarea>
+                <span asp-validation-for="Content"></span>
+            </div>
+            <br />
+            <div>
+                <input class="btn btn-warning pt-1" type="submit" value="Post" />
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

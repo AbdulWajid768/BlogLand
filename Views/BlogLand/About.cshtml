@@ -1,0 +1,33 @@
+﻿@using ASSIGNMENT3.Models
+@model User
+@{
+    ViewData["Title"] = "About";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+
+    <div class="container p-5 mt-5 bg-danger text-light" style="border-radius: 20px; width: 60%;">
+        <div>
+            <h4><b>About</b></h4>
+            <hr />
+            <h5><i>@Model.About</i> </h5>
+        </div>
+        <br />
+        <div>
+            <a class="btn btn-warning" asp-action="ChangeAbout" asp-route-id=@Model.UserID>Update</a>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

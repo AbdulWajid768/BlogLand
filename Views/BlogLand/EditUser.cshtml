@@ -1,0 +1,55 @@
+﻿@using ASSIGNMENT3.Models
+@model User
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Edit User";
+}
+
+
+<form method="post" action="/BlogLand/EditUser">
+    <br /><br />
+    <div class="container p-5" style="width:40%">
+        <div>
+            <label class="form-label" asp-for="UserID"></label><br>
+            <input class="form-control" asp-for="UserID" readonly>
+            <span asp-validation-for="UserID"></span>
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="Username"></label><br>
+            <input class="form-control" asp-for="Username">
+            <span asp-validation-for="Username"></span>
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="Email"></label><br>
+            <input class="form-control" asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="Password"></label><br>
+            <input class="form-control" asp-for="Password">
+            <span asp-validation-for="Password"></span><br />
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="ConfirmPassword"></label><br>
+            <input id="conPassword" class="form-control" asp-for="ConfirmPassword">
+            <span asp-validation-for="ConfirmPassword"></span><br />
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="About"></label><br>
+            <textarea id="conPassword" class="form-control" asp-for="About">@Model.About</textarea>
+            <span asp-validation-for="About"></span><br />
+        </div>
+        <div>
+            <input class="btn btn-danger pt-1" type="submit" value="Edit" />
+        </div>
+    </div>
+</form>
+<br />
+<br />
+<br />
+<br />

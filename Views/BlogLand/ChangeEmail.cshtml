@@ -1,0 +1,35 @@
+﻿@using ASSIGNMENT3.Models
+@model User
+@{
+    ViewData["Title"] = "Update Email";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+
+    <form method="post" action="/BlogLand/ChangeEmail" class="container p-5 mt-5 bg-danger text-light" style="border-radius: 20px; width: 60%;">
+        <div class="container mt-2 p-5" style="width:60%">
+            <div class="align-items-center">
+                <label class="form-label" asp-for="@Model.Email"></label><br>
+                <input class="form-control" asp-for="@Model.Email">
+                <span asp-validation-for="@Model.Email"></span>
+            </div>
+            <br />
+            <div>
+                <input class="btn btn-danger pt-1" type="submit" value="Update" />
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

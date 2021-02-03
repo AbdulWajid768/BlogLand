@@ -1,0 +1,35 @@
+﻿@using ASSIGNMENT3.Models
+@model User
+@{
+    ViewData["Title"] = "Update About";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+
+    <form method="post" action="/BlogLand/ChangeAbout" class="container p-5 mt-5 bg-danger text-light" style="border-radius: 20px; width: 60%;">
+        <div class="container mt-2 p-5" style="width:60%">
+            <div class="align-items-center">
+                <label class="form-label" asp-for="@Model.About"></label><br>
+                <textarea class="form-control" asp-for="@Model.About"  style="height:150px"></textarea>
+                <span asp-validation-for="@Model.About"></span>
+            </div>
+            <br />
+            <div>
+                <input class="btn btn-danger pt-1" type="submit" value="Update" />
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

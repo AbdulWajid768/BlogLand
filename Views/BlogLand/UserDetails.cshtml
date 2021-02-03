@@ -1,0 +1,36 @@
+﻿@using ASSIGNMENT3.Models
+@model User
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "UserDetails";
+}
+
+
+<form>
+    <br /><br />
+          <div class="container p-5" style="width:40%">
+              <div>
+                  <label class="form-label"></label><br>
+                  <input class="form-control" value="@Model.UserID" readonly>
+              </div>
+              <div>
+                  <label class="form-label"></label><br>
+                  <input class="form-control" value="@Model.Username" readonly>
+              </div>
+              <br />
+              <div>
+                  <label class="form-label"></label><br>
+                  <input class="form-control" value="@Model.Email" readonly>
+              </div>
+              <br />
+              <div>
+                  <label class="form-label"></label><br>
+                  <input class="form-control" value="@Model.Password" readonly>
+              </div>
+              <br />
+              <div>
+                  <label class="form-label"></label><br>
+                   <textarea class="form-control" readonly>@Model.About</textarea>
+              </div>
+          </div>
+</form>

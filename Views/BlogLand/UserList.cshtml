@@ -1,0 +1,45 @@
+﻿@using ASSIGNMENT3.Models
+@model List<User>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Home";
+}
+
+<br />
+<br />
+<br />
+<p>   </p><a class="btn btn-warning" asp-action="AddUser">Add User</a>
+<br />
+<br />
+<table class="table table-striped table-hover table-striped bg-danger">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>About</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (User u in Model)
+        {
+
+            <tr>
+                <td>   @u.Username       </td>
+                <td>   @u.Email      </td>
+                <td>   @u.Password       </td>
+                <td>   @u.About      </td>
+                <td>
+
+                    <a class="btn btn-info" asp-action="UserDetails" asp-route-id="@u.UserID">Details</a>
+                    <a class="btn btn-warning" asp-action="EditUser" asp-route-id="@u.UserID">Edit</a>
+                    <a class="btn btn-danger" asp-action="DeleteUser" asp-route-id="@u.UserID">Delete</a>
+                </td>
+            </tr>
+
+        }
+
+
+    </tbody>
+</table>

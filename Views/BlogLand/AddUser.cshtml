@@ -1,0 +1,46 @@
+﻿@using ASSIGNMENT3.Models
+@model User
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Sign up";
+}
+
+
+<form method="post" action="/BlogLand/AddUser">
+    <br /><br />
+    <div class="container p-5" style="width:40%">
+        <div>
+            <label class="form-label" asp-for="Username"></label><br>
+            <input class="form-control" asp-for="Username">
+            <span asp-validation-for="Username"></span>
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="Email"></label><br>
+            <input class="form-control" asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="Password"></label><br>
+            <input id="password" type="password" class="form-control" asp-for="Password">
+            <span asp-validation-for="Password"></span><br />
+            <input type="checkbox" onclick="showSignupPassword()"> Show Password
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="ConfirmPassword"></label><br>
+            <input id="conPassword" type="password" class="form-control" asp-for="ConfirmPassword">
+            <span asp-validation-for="ConfirmPassword"></span><br />
+            <input type="checkbox" onclick="showSignupConPassword()"> Show Password
+        </div>
+        <br />
+        <div>
+            <input class="btn btn-danger pt-1" type="submit" value="Add" />
+        </div>
+    </div>
+</form>
+<br />
+<br />
+<br />
+<br />

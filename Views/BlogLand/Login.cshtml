@@ -1,0 +1,33 @@
+﻿@using ASSIGNMENT3.Models
+@model Login
+@{ 
+    Layout = "~/Views/Shared/_LoginSignupLayout.cshtml";
+    ViewData["Title"] = "Login";
+}
+
+<form method="post" action="/">
+    <br /><br />
+    <div class="container mt-2 p-5" style="width:40%;">
+        <div class="align-items-center">
+            <label class="form-label" asp-for="Username"></label><br>
+            <input class="form-control" asp-for="Username">
+            <span asp-validation-for="Username"></span>
+        </div>
+        <br />
+        <div>
+            <label class="form-label" asp-for="Password"></label><br>
+            <input id="password" type="password" class="form-control" asp-for="Password">
+            <span asp-validation-for="Password"></span><br />
+            <input type="checkbox" onclick="showLoginPassword()"> Show Password
+        </div>
+        <br />
+        <div>
+            <input class="btn btn-danger pt-1" type="submit" value="Log in" />
+        </div>
+        <br />
+        <div class="text-center">
+            <a asp-action="ForgetPassword">ForgetPassword?</a>
+            <a asp-action="Signup" class="btn btn-danger pt-1"> Sign up</a>
+        </div>
+    </div>
+</form>
